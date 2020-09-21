@@ -4,12 +4,17 @@ const FOOD_COLOUR = 'red';
 
 let score = 0;
 const scoreBoard = document.querySelector('.score')
+const gameOver = document.querySelector('.gameOver');
 
 function updateScore() {
-    scoreBoard.textContent = score++;
+    scoreBoard.textContent = score = score+1;
 }
 function resetScore() {
     scoreBoard.textContent = score = 0;
+    gameOver.style.display = 'block'
+    setTimeout( function() {
+        gameOver.style.display = 'none'
+    }, 2000);
 }
 
 
